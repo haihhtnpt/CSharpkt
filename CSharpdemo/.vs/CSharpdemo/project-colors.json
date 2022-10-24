@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "984c7a04-de8e-45c0-83bd-d61700555658": {
+      "ProjectGuid": "984c7a04-de8e-45c0-83bd-d61700555658",
+      "DisplayName": "CSharpdemo",
+      "ColorIndex": 0
+    },
+    "371337c3-2ba5-4794-a067-1a0ae86b6e77": {
+      "ProjectGuid": "371337c3-2ba5-4794-a067-1a0ae86b6e77",
+      "DisplayName": "CSharpdemo.nUnitTests",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

@@ -1,0 +1,15 @@
+F:\CSharpkt\CSharpdemo\CSharpdemo\bin\Debug\net6.0\CSharpdemo.exe
+F:\CSharpkt\CSharpdemo\CSharpdemo\bin\Debug\net6.0\CSharpdemo.deps.json
+F:\CSharpkt\CSharpdemo\CSharpdemo\bin\Debug\net6.0\CSharpdemo.runtimeconfig.json
+F:\CSharpkt\CSharpdemo\CSharpdemo\bin\Debug\net6.0\CSharpdemo.dll
+F:\CSharpkt\CSharpdemo\CSharpdemo\bin\Debug\net6.0\CSharpdemo.pdb
+F:\CSharpkt\CSharpdemo\CSharpdemo\obj\Debug\net6.0\CSharpdemo.csproj.AssemblyReference.cache
+F:\CSharpkt\CSharpdemo\CSharpdemo\obj\Debug\net6.0\CSharpdemo.GeneratedMSBuildEditorConfig.editorconfig
+F:\CSharpkt\CSharpdemo\CSharpdemo\obj\Debug\net6.0\CSharpdemo.AssemblyInfoInputs.cache
+F:\CSharpkt\CSharpdemo\CSharpdemo\obj\Debug\net6.0\CSharpdemo.AssemblyInfo.cs
+F:\CSharpkt\CSharpdemo\CSharpdemo\obj\Debug\net6.0\CSharpdemo.csproj.CoreCompileInputs.cache
+F:\CSharpkt\CSharpdemo\CSharpdemo\obj\Debug\net6.0\CSharpdemo.dll
+F:\CSharpkt\CSharpdemo\CSharpdemo\obj\Debug\net6.0\ref\CSharpdemo.dll
+F:\CSharpkt\CSharpdemo\CSharpdemo\obj\Debug\net6.0\CSharpdemo.pdb
+F:\CSharpkt\CSharpdemo\CSharpdemo\obj\Debug\net6.0\CSharpdemo.genruntimeconfig.cache
+F:\CSharpkt\CSharpdemo\CSharpdemo\bin\Debug\net6.0\ref\CSharpdemo.dll
