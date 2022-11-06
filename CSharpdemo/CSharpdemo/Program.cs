@@ -8,12 +8,27 @@ IValidator service = new Validator();
 
 Ticket a = new Ticket();
 a.InputData();
-a.OutputData();
+Console.WriteLine("");
 var validationResult = service.Validate(a);
 
-foreach (var error in validationResult.Errors)
+if (validationResult.Errors.Any() == true)
 {
-    Console.WriteLine(error.Key + ": ");
-    error.Value.ToList().ForEach(x => Console.WriteLine(" " + x));
+    foreach (var error in validationResult.Errors)
+    {
+        Console.WriteLine(error.Key + ": ");
+        error.Value.ToList().ForEach(x => Console.WriteLine(" " + x));
+
+    }
+    if (a.Type == TicketType.Error)
+    {
+        Console.WriteLine("TicketType:");
+        Console.WriteLine(" TicketType field is not valid.(Only 0 or 1).");
+
+    }
+    Console.WriteLine("Dữ liệu được lưu không thành công. Yêu cầu nhập lại!");
 }
-//Console.WriteLine($"ten la{a.Name}");
+else
+{
+    a.OutputData();
+}
+

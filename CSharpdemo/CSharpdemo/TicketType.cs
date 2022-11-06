@@ -2,6 +2,6 @@
 {
     public enum TicketType
     {
-        Normal, Vip
+        Normal, Vip,Error
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿
+using System.Text;
 using System.Runtime.CompilerServices;
 using System;
 using System.ComponentModel.DataAnnotations;
@@ -11,7 +12,7 @@ namespace CSprj
         {
 
         }
-        public Ticket(DateTime birth,TicketType type)
+        public Ticket(DateTime birth, TicketType type)
         {
             _birth = birth;
             Type = type;
@@ -28,15 +29,29 @@ namespace CSprj
         private DateTime _birth;
         [Required()]
         public DateTime Birth { get => _birth; }
-        [Required()]
+
+        public Ticket(string name, string address, string cardNo, TicketType type, string emailAddress)
+        {
+            this.Name = name;
+            this.Address = address;
+            this.CardNo = cardNo;
+            this.Type = type;
+            this.EmailAddress = emailAddress;
+
+        }
+        [StringLength(64, MinimumLength = 2, ErrorMessage = "Name must be between 2 and 64 character in length.")]
+
         public string Name { get; set; }
         [Required()]
+        [StringLength(64, MinimumLength = 2, ErrorMessage = "Address must be between 2 and 64 character in length.")]
         public string Address { get; set; }
         [Required()]
+        [StringLength(12, MinimumLength = 9, ErrorMessage = "CardNo must be between 2 and 64 character in length.")]
         public string CardNo { get; set; }
         [Required()]
+
         public TicketType Type { get; set; }
-        [Required]
+        [Required()]
         [EmailAddress]
         public string EmailAddress { get; set; }
 
@@ -45,6 +60,7 @@ namespace CSprj
         {
             get => _birth.Year == DateTime.Now.Year ? 1 : DateTime.Now.Year - _birth.Year;
         }
+
         public decimal Payment
         {
             get
@@ -56,17 +72,15 @@ namespace CSprj
                 return Type == TicketType.Normal ? 700000 : 1500000;
             }
         }
-       
-       
         public void InputData()
         {
 
             Console.Write("Enter name:= ");
-            Name = Convert.ToString(Console.ReadLine());
+            Name = Console.ReadLine();
             Console.Write("Enter address:= ");
-            Address = Convert.ToString(Console.ReadLine());
+            Address = Console.ReadLine();
             Console.Write("Enter CardNo:= ");
-            CardNo = Convert.ToString(Console.ReadLine());
+            CardNo = Console.ReadLine();
             Console.WriteLine("Nhập ngày tháng năm sinh: ");
             Console.OutputEncoding = Encoding.UTF8;
             Console.WriteLine("Ngày: ");
@@ -77,33 +91,34 @@ namespace CSprj
 
             Console.WriteLine("Năm: ");
             int year = Int32.Parse(Console.ReadLine());
-            // DateTime Birth = new DateTime(year,month,day); 
+            
             _birth = new DateTime(year, month, day);
             Console.WriteLine("Enter TypeTicket (Normal=0,Vip=1):= ");
             string type = (Console.ReadLine());
-            TicketType ticketTypeENum;
+
             if (type == "0")
             {
-                ticketTypeENum = TicketType.Vip;
+
+                Type = TicketType.Normal;
             }
             else if (type == "1")
             {
-                ticketTypeENum = TicketType.Normal;
+                Type = TicketType.Vip;
             }
             else
-                throw new ApplicationException("Cú pháp nhập vào không hợp lệ. Yêu cầu chỉ được chọn 1 hoặc 2.");
-
-            Console.Write("nhap dia chi email:= ");
-            EmailAddress = Convert.ToString(Console.ReadLine());
+            {
+                Type = TicketType.Error;
+            }
+            
+            Console.Write("Nhập địa chỉ Email:= ");
+            EmailAddress = Console.ReadLine();
 
 
 
         }
         public void OutputData()
-        {
-
-          
-            Console.WriteLine($"Giá vé lá:= {Payment}");
+        {      
+            Console.WriteLine($"Dữ liệu được lưu thành công.Thành tiền:= {Payment}");
         }
     }
 }
